@@ -63,6 +63,7 @@ ApiomatAdapter.prototype.postPhoto = function(_args, _callbacks) {
 		onOK : function() {
 			that.user.postmyNewPhotos(myNewPhoto, {
 				onOK : function() {
+					console.log('Info: photo uploaded');
 				},
 				onError : function() {
 				}
@@ -71,11 +72,7 @@ ApiomatAdapter.prototype.postPhoto = function(_args, _callbacks) {
 		onError : function() {
 		}
 	});
-	this.user.postPhoto(_args.image, {
-		onOk : function() {
-
-		}
-	});
+	
 };
 
 ApiomatAdapter.prototype.getAllPhotos = function(_args, _callbacks) {
