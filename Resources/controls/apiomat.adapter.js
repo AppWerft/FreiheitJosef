@@ -85,8 +85,8 @@ ApiomatAdapter.prototype.getAllPhotos = function(_args, _callbacks) {
 					latitude : _res[i].getLocationLatitude(),
 					longitude : _res[i].getLocationLongitude(),
 					title : _res[i].getTitle(),
-					thumb : _res[i].getPhotoURL(100, 100) + '&format=png',
-					image : _res[i].getPhotoURL(800, 800) + '&format=png',
+					thumb : _res[i].getPhotoURL(100, 100,null,null,'png'),
+					image : _res[i].getPhotoURL(800, 800,null,null,'png'),
 				});
 			}
 			_callbacks.onload(bar);

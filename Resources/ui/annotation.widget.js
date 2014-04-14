@@ -1,5 +1,6 @@
 Ti.Map = require('ti.map');
 exports.create = function(_pindata) {
+	console.log(_pindata.thumb);
 	var self = Ti.Map.createAnnotation({
 		latitude : _pindata.latitude,
 		longitude : _pindata.longitude,
@@ -10,7 +11,7 @@ exports.create = function(_pindata) {
 		}),
 		title : _pindata.title,
 		subtitle : 'Freiheit für Josef!',
-		image : '/appicon.png'
+		image : '/images/' + Ti.Platform.displayCaps.density + '-pin.png'
 	});
 	console.log(_pindata.thumb);
 	return self;
